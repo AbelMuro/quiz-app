@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'rubik';
+    src: url('./FontFiles/Rubik-VariableFont_wght.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rubik';
+    src: url('./FontFiles/Rubik-Italic-VariableFont_wght.ttf');
+    font-style: italic;
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.2s linear, opacity 0s, transform 0s,
+}
+
+
+:root{
+    --font: 'rubik';
+}

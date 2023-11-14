@@ -1,0 +1,62 @@
+.theme{
+    display: flex;
+    align-items: center;
+    gap: 16px;   
+}
+
+.theme_moon, .theme_sun {
+    width: 24px;
+    height: 24px;
+    mask-size: 24px 24px;
+    -webkit-mask-size: 24px 24px;    
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;  
+}
+
+.theme_sun {
+    mask-image: url('./icons/icon-sun-light.svg');
+    -webkit-mask-image: url('./icons/icon-sun-light.svg');  
+}
+
+.theme_moon {
+    mask-image: url('./icons/icon-moon-light.svg');
+    -webkit-mask-image: url('./icons/icon-moon-light.svg');
+}
+
+.theme_sun.light {
+    background-color: #626C7F;
+}
+
+.theme_sun.dark {
+    background-color: white;
+}
+
+.theme_moon.light {
+    background-color: #626C7F;
+}
+
+.theme_moon.dark {
+    background-color: white;
+}
+
+.theme_switch {
+    width: 48px;
+    height: 28px;
+    border-radius: 15px;
+    background-color: #A729F5;
+    position: relative;
+}
+
+.theme_switch div {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 4px;
+    margin: auto;
+}
