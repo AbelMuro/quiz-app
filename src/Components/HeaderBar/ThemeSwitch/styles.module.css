@@ -47,6 +47,7 @@
     border-radius: 15px;
     background-color: #A729F5;
     position: relative;
+    cursor: pointer;
 }
 
 .theme_switch div {
