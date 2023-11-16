@@ -2,8 +2,8 @@
     width: 1160px;
     display: flex;
     justify-content: space-between;
-    margin: auto;
     gap: 30px;
+    margin: 0px auto 172px auto;
 }
 
 .quiz_question {
@@ -30,7 +30,6 @@
 }
 
 .quiz_question h1{
-
     font-family: var(--font);
     font-size: 2.25rem;
     font-style: normal;
@@ -47,86 +46,3 @@
     color: var(--Pure-White, #FFF);
 }
 
-.quiz_progressBar{
-    display: flex;
-    align-items: center;
-    padding: 0px 4px;
-    height: 16px;
-    border-radius: 999px;
-}
-
-.quiz_progressBar.light{
-    background-color: var(--Pure-White, #FFF);
-}
-
-.quiz_progressBar.dark{
-    background: var(--Navy, #3B4D66);
-}
-
-.quiz_progressBar div{
-    height: 8px;
-    width: 50%;
-    border-radius: 104px;
-    background-color: var(--Purple, #A729F5);
-}
-
-.quiz_answers{
-    width: 564px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.quiz_answer{
-    cursor: pointer;
-    height: 92px;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    padding: 0px 20px;
-}
-
-.quiz_answer h3 {
-    pointer-events: none;
-    width: 56px;
-    height: 56px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--Light-Grey, #F4F6FA);
-    color: var(--Grey-Navy, #626C7F);
-    font-family: var(--font);
-    font-size: 1.75rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%; /* 28px */
-}
-
-.quiz_answer p {
-    pointer-events: none;
-    font-family: var(--font);
-    font-size: 1.75rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%; /* 28px */
-}
-
-.quiz_answer p.light{
-    color: var(--Dark-Navy, #313E51);
-}
-
-.quiz_answer p.dark {
-    color: var(--Pure-White, #FFF);
-}
-
-.quiz_answer.light{
-    background: var(--Pure-White, #FFF);
-    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
-}
-
-.quiz_answer.dark{
-    background: var(--Navy, #3B4D66);
-    box-shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
-}

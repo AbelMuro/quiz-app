@@ -1,0 +1,46 @@
+
+.quiz_submit{
+    margin-top: 8px;
+    cursor: pointer;
+    border: none;
+    height: 92px;
+    border-radius: 24px;
+    background-color: var(--Purple, #A729F5);
+    color: var(--Pure-White, #FFF);
+    font-family: var(--font);
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 28px */
+}
+
+.quiz_submit:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), var(--Purple, #A729F5);
+}
+
+.quiz_submit.light:hover{
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);  
+}
+
+.quiz_submit.dark:hover{
+    box-shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
+}
+
+.errorMessage{
+    display: none;
+    margin: 8px 0px 0px 0px;
+    justify-content: center;
+    gap: 13px;
+    align-items: center;
+    color: var(--Red, #EE5454);
+    font-family: var(--font);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+}
+
+.errorMessage img {
+    width: 30px;
+    object-fit: contain;
+}

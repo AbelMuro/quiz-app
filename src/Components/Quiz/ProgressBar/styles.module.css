@@ -1,0 +1,21 @@
+.quiz_progressBar{
+    display: flex;
+    align-items: center;
+    padding: 0px 4px;
+    height: 16px;
+    border-radius: 999px;
+}
+
+.quiz_progressBar.light{
+    background-color: var(--Pure-White, #FFF);
+}
+
+.quiz_progressBar.dark{
+    background: var(--Navy, #3B4D66);
+}
+
+.quiz_progressBar div{
+    height: 8px;
+    border-radius: 104px;
+    background-color: var(--Purple, #A729F5);
+}
