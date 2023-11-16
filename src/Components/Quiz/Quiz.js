@@ -1,6 +1,6 @@
 import React, {useState, useCallback, useEffect} from 'react';
 import styles from './styles.module.css';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import DisplayChoices from './DisplayChoices';
 import ProgressBar from './ProgressBar';
 import data from './data';
