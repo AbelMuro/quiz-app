@@ -66,7 +66,7 @@ const SubmitAnswer = forwardRef(({choice, setChoice}, ref) => {
 
     return(
         <>
-            <button className={theme === 'light' ? 
+            <button type='button' className={theme === 'light' ? 
                 [styles.quiz_submit, styles.light].join(' ') : 
                 [styles.quiz_submit, styles.dark].join(' ')} 
                 onClick={nextQuestion ? handleNextQuestion : handleSubmit}

@@ -37,7 +37,7 @@ function Menu() {
                 </p>                
             </div>
             <div className={styles.menu_subjects}>
-                <button 
+                <button type='button' 
                     data-subject='HTML'
                     className={switchTheme()} 
                     onClick={handleSubject}>
@@ -46,7 +46,7 @@ function Menu() {
                     </div>
                     HTML
                 </button>
-                <button 
+                <button type='button' 
                     className={switchTheme()} 
                     onClick={handleSubject}
                     data-subject='CSS'>
@@ -55,7 +55,7 @@ function Menu() {
                     </div>
                     CSS
                 </button>
-                <button 
+                <button type='button' 
                     className={switchTheme()} 
                     onClick={handleSubject}
                     data-subject='Javascript'>
@@ -64,7 +64,7 @@ function Menu() {
                     </div>
                     Javascript
                 </button>
-                <button 
+                <button type='button' 
                     className={switchTheme()} 
                     onClick={handleSubject}
                     data-subject='Accessibility'>

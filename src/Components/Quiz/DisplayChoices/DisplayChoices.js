@@ -53,7 +53,7 @@ function DisplayChoices({choices, answer}){
                 choices.map((option, i) => {
                     const letter = (i + 10).toString(36).toUpperCase(); //converting numbers to letters (1 --> a, 2 --> b, etc...)
                     return(
-                        <button 
+                        <button type='button' 
                             className={switchTheme(styles.quiz_answer)} 
                             data-choice={letter} 
                             data-correct={option === answer}

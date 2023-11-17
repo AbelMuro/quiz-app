@@ -64,7 +64,7 @@ function Results() {
                         out of {totalQuestions}
                     </h4>
                 </div>
-                <button className={styles.results_playAgain} onClick={handlePlayAgain}> 
+                <button type='button' className={styles.results_playAgain} onClick={handlePlayAgain}> 
                     Play Again
                 </button>
             </div>
