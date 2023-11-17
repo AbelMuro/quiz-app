@@ -3,15 +3,18 @@ import styles from './styles.module.css';
 import icons from '~/Common/icons';
 import {useSelector, useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import { choiceVariants } from './variants';
 
 function Menu() {
     const theme = useSelector(state => state.theme);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+
     const handleSubject = (e) => {
         const subject = e.target.getAttribute('data-subject');
-        dispatch({type: 'START_QUIZ', subject})
+        dispatch({type: 'START_QUIZ', subject});
         navigate('/quiz');
     }
 
@@ -34,25 +37,37 @@ function Menu() {
                 </p>                
             </div>
             <div className={styles.menu_subjects}>
-                <button className={switchTheme()} onClick={handleSubject} data-subject='HTML'>
+                <button 
+                    data-subject='HTML'
+                    className={switchTheme()} 
+                    onClick={handleSubject}>
                     <div className={styles.subject_icon}>
                         <img src={icons['HTML']}/>
                     </div>
                     HTML
                 </button>
-                <button className={switchTheme()} onClick={handleSubject} data-subject='CSS'>
+                <button 
+                    className={switchTheme()} 
+                    onClick={handleSubject}
+                    data-subject='CSS'>
                     <div className={styles.subject_icon}>
                         <img src={icons['CSS']}/>
                     </div>
                     CSS
                 </button>
-                <button className={switchTheme()} onClick={handleSubject} data-subject='Javascript'>
+                <button 
+                    className={switchTheme()} 
+                    onClick={handleSubject}
+                    data-subject='Javascript'>
                     <div className={styles.subject_icon}>
                         <img src={icons['Javascript']}/>
                     </div>
                     Javascript
                 </button>
-                <button className={switchTheme()} onClick={handleSubject} data-subject='Accessibility'>
+                <button 
+                    className={switchTheme()} 
+                    onClick={handleSubject}
+                    data-subject='Accessibility'>
                     <div className={styles.subject_icon}>
                         <img src={icons['Accessibility']}/>
                     </div>

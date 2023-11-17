@@ -46,7 +46,9 @@ function DisplayChoices({choices, answer}){
     }, [choice])
 
     return(
-        <div className={styles.quiz_answers} onClick={handleClick}>
+        <div className={styles.quiz_answers} 
+            onClick={handleClick}
+            transition={{staggerChildren: 0.4}}>
             {
                 choices.map((option, i) => {
                     const letter = (i + 10).toString(36).toUpperCase(); //converting numbers to letters (1 --> a, 2 --> b, etc...)

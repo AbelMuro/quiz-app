@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import icons from './icons';
 import { useDispatch } from 'react-redux';
 
-
 const SubmitAnswer = forwardRef(({choice, setChoice}, ref) => {
     const [nextQuestion, setNextQuestion] = useState(false);
     const errorMessageRef = useRef();
@@ -66,7 +65,8 @@ const SubmitAnswer = forwardRef(({choice, setChoice}, ref) => {
             <button className={theme === 'light' ? 
                 [styles.quiz_submit, styles.light].join(' ') : 
                 [styles.quiz_submit, styles.dark].join(' ')} 
-                onClick={nextQuestion ? handleNextQuestion : handleSubmit}>
+                onClick={nextQuestion ? handleNextQuestion : handleSubmit}
+                >
                     Submit Answer
             </button>     
             <p className={styles.errorMessage} ref={errorMessageRef}>
