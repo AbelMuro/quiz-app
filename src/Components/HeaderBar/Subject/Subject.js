@@ -22,7 +22,7 @@ function Subject() {
     return(
         <section className={styles.subject}>
             <div className={styles.subject_icon} ref={iconBoxRef}>
-                <img src={icons[`${subject}`]}/>
+                <img src={icons[`${subject}`]} alt={subject}/>
             </div>
             <h1 className={theme === 'light' ? styles.light : styles.dark}>
                 {subject}

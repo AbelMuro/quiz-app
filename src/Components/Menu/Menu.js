@@ -42,7 +42,7 @@ function Menu() {
                     className={switchTheme()} 
                     onClick={handleSubject}>
                     <div className={styles.subject_icon}>
-                        <img src={icons['HTML']}/>
+                        <img src={icons['HTML']} alt='HTML'/>
                     </div>
                     HTML
                 </button>
@@ -51,7 +51,7 @@ function Menu() {
                     onClick={handleSubject}
                     data-subject='CSS'>
                     <div className={styles.subject_icon}>
-                        <img src={icons['CSS']}/>
+                        <img src={icons['CSS']} alt='CSS'/>
                     </div>
                     CSS
                 </button>
@@ -60,7 +60,7 @@ function Menu() {
                     onClick={handleSubject}
                     data-subject='Javascript'>
                     <div className={styles.subject_icon}>
-                        <img src={icons['Javascript']}/>
+                        <img src={icons['Javascript']} alt='javascript'/>
                     </div>
                     Javascript
                 </button>
@@ -69,7 +69,7 @@ function Menu() {
                     onClick={handleSubject}
                     data-subject='Accessibility'>
                     <div className={styles.subject_icon}>
-                        <img src={icons['Accessibility']}/>
+                        <img src={icons['Accessibility']} alt='accessibility'/>
                     </div>
                     Accessibility
                 </button>

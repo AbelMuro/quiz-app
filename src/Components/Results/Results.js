@@ -53,7 +53,7 @@ function Results() {
                 <div className={switchTheme(styles.results_scoreBox)}>
                     <h3 className={switchTheme(styles.results_subject)}>
                         <div ref={subjectIconRef}>
-                            <img src={icons[subject]}/>                            
+                            <img src={icons[subject]} alt={subject}/>                            
                         </div>
                         {subject}
                     </h3>

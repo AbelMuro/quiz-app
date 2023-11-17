@@ -64,7 +64,7 @@ function DisplayChoices({choices, answer}){
                                 <p className={switchTheme()}>
                                     {option}
                                 </p>
-                                <img className={styles.isCorrectIcon}/>
+                                <img className={styles.isCorrectIcon} alt='results'/>
                         </button>
                     )
                 })
