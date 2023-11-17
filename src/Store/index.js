@@ -1,3 +1,3 @@
-import store from './Store.js';
+import {store, persistedStore} from './Store.js';
 
-export default store;
+export {store, persistedStore};

@@ -41,6 +41,24 @@
 }
 
 .errorMessage img {
-    width: 30px;
+    width: 40px;
     object-fit: contain;
+}
+
+@media(max-width: 550px){
+    .quiz_submit{
+        margin-top: 0px;
+        font-size: 1.125rem;
+        height: 56px;
+        border-radius: 12px;
+    }
+
+    .errorMessage{
+        font-size: 1.125rem;
+        gap: 12px;
+    }
+
+    .errorMessage img {
+        width: 32px;
+    }
 }

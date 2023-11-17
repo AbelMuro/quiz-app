@@ -5,27 +5,21 @@ import icons from './icons';
 import { useDispatch } from 'react-redux';
 
 
-const SubmitAnswer = forwardRef(({choice}, ref) => {
+const SubmitAnswer = forwardRef(({choice, setChoice}, ref) => {
     const [nextQuestion, setNextQuestion] = useState(false);
     const errorMessageRef = useRef();
     const theme = useSelector(state => state.theme);
     const dispatch = useDispatch();
 
     const handleNextQuestion = (e) => {
+        setChoice('');        
         setNextQuestion(false);
         dispatch({type: 'NEXT_QUESTION'});
         e.target.innerHTML = 'Submit Answer';
-
-        const allChoices = document.querySelectorAll('button[data-choice]');   
-        allChoices.forEach((choice) => {
-            choice.style.pointerEvents = '';
-            choice.style.border = '';
-            choice.firstElementChild.style.backgroundColor = '';
-            choice.firstElementChild.style.color = '';
-            choice.lastElementChild.setAttribute('src', '');
-        })
     }
 
+    //this event handler will give a green border to the user's choice if its correct
+    //and an red border to the user's choice IF its incorrect 
     const handleSubmit = (e) => {
         if(!choice){
             errorMessageRef.current.style.display = 'flex';
@@ -36,7 +30,6 @@ const SubmitAnswer = forwardRef(({choice}, ref) => {
         const allChoices = document.querySelectorAll('button[data-choice]');    
         const isCorrect = ref.current.getAttribute('data-correct') === 'true';
 
-        
         if(isCorrect){
             ref.current.style.border = '3px solid #26D782';
             ref.current.firstElementChild.style.backgroundColor = '#26D782';
@@ -60,6 +53,7 @@ const SubmitAnswer = forwardRef(({choice}, ref) => {
         allChoices.forEach((choice) => {
             choice.style.pointerEvents = 'none';
         })
+        errorMessageRef.current.style.display = '';
     }
 
     return(

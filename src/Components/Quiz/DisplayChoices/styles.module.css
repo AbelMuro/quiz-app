@@ -1,4 +1,3 @@
-
 .quiz_answers{
     width: 564px;
     display: flex;
@@ -8,16 +7,15 @@
 
 .quiz_answer{
     cursor: pointer;
-    height: 92px;
+    min-height: 92px;
     border-radius: 24px;
     display: flex;
     align-items: center;
     gap: 32px;
-    padding: 0px 60px 0px 20px;
+    padding: 18px 60px 18px 20px;
     border: 3px solid transparent;
     position: relative;
 }
-
 
 .quiz_answer h3 {
     flex-shrink: 0;
@@ -82,11 +80,62 @@
 }
 
 .isCorrectIcon {
-    width: 30px;
+    width: 40px;
     object-fit: contain;
     position: absolute;
     top: 0px;
     bottom: 0px;
     right: 20px;
     margin: auto;
+    pointer-events: none;
+}
+
+@media(max-width: 1000px){
+    .quiz_answer p{
+        font-size: 1.25rem;
+    }
+}
+
+/* tablet*/
+@media(max-width: 800px){
+    .quiz_answers{
+        width: 100%;
+    }
+
+    .quiz_answer{
+        min-height: 80px;
+        padding: 12px 40px 12px 12px;
+    }
+
+    .isCorrectIcon{
+        right: 14px;
+    }
+
+    .quiz_answer p{
+        font-size: 1.75rem;
+    }
+}
+
+@media(max-width: 550px){
+    .quiz_answers{
+        gap: 12px;
+    }
+
+    .quiz_answer{
+        min-height: 64px;
+    }
+
+    .quiz_answer h3{
+        width: 40px;
+        height: 40px;
+        font-size: 1.125rem;
+    }
+
+    .quiz_answer p {
+        font-size: 1.125rem;
+    }
+
+    .isCorrectIcon{
+        width: 32px;
+    }
 }

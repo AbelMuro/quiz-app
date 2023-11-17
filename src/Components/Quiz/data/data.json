@@ -211,7 +211,7 @@
             ]
         },
         {
-            "subject": "JavaScript",
+            "subject": "Javascript",
             "questions": [
                 {
                     "question": "Which syntax is correct to output 'Hello World' in an alert box?",

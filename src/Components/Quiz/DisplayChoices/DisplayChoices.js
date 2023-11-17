@@ -8,11 +8,11 @@ function DisplayChoices({choices, answer}){
     const [choice, setChoice] = useState('');
     const choiceRef = useRef();
 
+    //this event handler will save a reference to the choice the user selected
     const handleClick = (e) => {
         if(!e.target.matches('.' + styles.quiz_answer)) return;
 
         const selectedChoice = e.target.getAttribute('data-choice');
-
         choiceRef.current = e.target;
         setChoice(selectedChoice);
     }
@@ -24,6 +24,7 @@ function DisplayChoices({choices, answer}){
             return [className ? className : '', styles.dark].join(' ');
     }, [theme])
 
+    //this useEffect will give a purple border to the choice that the user selected
     useEffect(() => {
         const allChoices = document.querySelectorAll('.' + styles.quiz_answer);
 
@@ -31,6 +32,8 @@ function DisplayChoices({choices, answer}){
             currentChoice.style.border = '';
             currentChoice.firstElementChild.style.backgroundColor = '';
             currentChoice.firstElementChild.style.color = ''
+            currentChoice.lastElementChild.setAttribute('src', '');
+            currentChoice.style.pointerEvents = ''
         })
 
         allChoices.forEach((currentChoice) => {
@@ -46,7 +49,7 @@ function DisplayChoices({choices, answer}){
         <div className={styles.quiz_answers} onClick={handleClick}>
             {
                 choices.map((option, i) => {
-                    const letter = (i + 10).toString(36).toUpperCase(); //converting numbers to letters (1 to a, 2 to b, etc...)
+                    const letter = (i + 10).toString(36).toUpperCase(); //converting numbers to letters (1 --> a, 2 --> b, etc...)
                     return(
                         <button 
                             className={switchTheme(styles.quiz_answer)} 
@@ -64,7 +67,7 @@ function DisplayChoices({choices, answer}){
                     )
                 })
             }
-            <SubmitAnswer choice={choice} ref={choiceRef}/>
+            <SubmitAnswer choice={choice} setChoice={setChoice} ref={choiceRef}/>
         </div>  
     )
 }

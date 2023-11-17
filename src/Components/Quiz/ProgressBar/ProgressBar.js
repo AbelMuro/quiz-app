@@ -1,15 +1,22 @@
 import React, {useEffect, useRef, memo} from 'react';
 import styles from './styles.module.css';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
-function ProgressBar(){
+function ProgressBar({totalQuestions}){
+    const navigate = useNavigate();
     const theme = useSelector(state => state.theme);
-    const completedQuestions = useSelector(state => state.quiz.completedQuestions)
+    const currentQuestionNumber = useSelector(state => state.quiz.currentQuestionNumber);
     const progressRef = useRef();
 
     useEffect(() => {
-        progressRef.current.style.width = `${(completedQuestions) * 10}%`
-    }, [completedQuestions])
+        progressRef.current.style.width = `${currentQuestionNumber/totalQuestions * 100}%`;
+    }, [currentQuestionNumber])
+
+    useEffect(() => {
+        if(currentQuestionNumber === totalQuestions)
+            navigate('/results');
+    }, [currentQuestionNumber])
 
     return(
         <div 
