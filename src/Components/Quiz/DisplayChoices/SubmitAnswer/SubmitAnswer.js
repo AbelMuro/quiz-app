@@ -23,6 +23,11 @@ const SubmitAnswer = forwardRef(({choice, setChoice}, ref) => {
     const handleSubmit = (e) => {
         if(!choice){
             errorMessageRef.current.style.display = 'flex';
+            const bodyHeight = document.querySelector('body').scrollHeight;
+            window.scrollTo({
+                top: bodyHeight,
+                behavior: 'smooth',
+              });
             return;
         }
         setNextQuestion(true);
