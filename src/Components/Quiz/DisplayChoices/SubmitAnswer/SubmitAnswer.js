@@ -14,6 +14,10 @@ const SubmitAnswer = forwardRef(({choice, setChoice}, ref) => {
         setChoice('');        
         setNextQuestion(false);
         dispatch({type: 'NEXT_QUESTION'});
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
         e.target.innerHTML = 'Submit Answer';
     }
 
