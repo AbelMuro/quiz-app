@@ -9,6 +9,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#313E51" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front End Quiz</title>
+    <link rel="manifest" href="/manifest.json"/>
     <base href="/"/> 
 </head>
 <body>
@@ -19,8 +20,8 @@
     <script> 
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/ServiceWorkers/ServiceWorkers.js')
-                    .then((registration) =>  {
+                navigator.serviceWorker.register('ServiceWorkers.js')
+                    .then((registration) => {
                         console.log('Worker registration is successful', registration.scope);
                     }, (err) => {
                         console.log('Worker registration has failed', err);
