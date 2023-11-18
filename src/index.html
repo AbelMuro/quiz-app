@@ -20,7 +20,7 @@
     <script> 
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/ServiceWorkers.js')
+                navigator.serviceWorker.register('/ServiceWorkers.js', {scope: './'})
                     .then((registration) => {
                         console.log('Worker registration is successful', registration.scope);
                     }, (err) => {
