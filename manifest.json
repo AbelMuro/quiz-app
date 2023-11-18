@@ -1,5 +1,15 @@
 {
-    "name": "Front-end Quiz App",
-    "version": 1.0,
-    "manifest_version": 1.0
+    "short_name": "Front-end Quiz App",
+    "name": "Quiz App",
+    "icons": [
+      {
+        "src": "favicon-32x32.png",
+        "type": "image/png",
+        "sizes": "32x32"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
   }
