@@ -4,17 +4,19 @@ var urlsToCache = [
   '/completed'
 ];
 
+
 // Install service worker
 self.addEventListener('install', event => {
   // Perform the install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
+        console.log('Cache opened');
         return cache.addAll(urlsToCache);
       })
   );
 });
-
+ 
 // Cache and return the requests
 self.addEventListener('fetch', event => {
   event.respondWith(
@@ -29,7 +31,7 @@ self.addEventListener('fetch', event => {
     )
   );
 });
-
+ 
 // Update service worker
 self.addEventListener('activate', event => {
   var cacheWhitelist = ['task-manager-pwa'];
