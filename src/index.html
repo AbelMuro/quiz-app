@@ -17,10 +17,10 @@
         Please enable javascript to use the app
     </noscript>
     <div id="root"></div>
-    <script> 
+    <script type="text/javascript"> 
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('ServiceWorkers.js')
+                navigator.serviceWorker.register('/ServiceWorkers.js')
                     .then((registration) => {
                         console.log('Worker registration is successful', registration.scope);
                     }, (err) => {
