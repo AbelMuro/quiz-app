@@ -3,8 +3,6 @@ import styles from './styles.module.css';
 import icons from '~/Common/icons';
 import {useSelector, useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
-import {motion} from 'framer-motion';
-import { choiceVariants } from './variants';
 
 function Menu() {
     const theme = useSelector(state => state.theme);
@@ -42,7 +40,7 @@ function Menu() {
                     className={switchTheme()} 
                     onClick={handleSubject}>
                     <div className={styles.subject_icon}>
-                        <img src={icons['HTML']} alt='HTML'/>
+                        <img src={icons['HTML']} alt='HTML icon'/>
                     </div>
                     HTML
                 </button>
@@ -51,7 +49,7 @@ function Menu() {
                     onClick={handleSubject}
                     data-subject='CSS'>
                     <div className={styles.subject_icon}>
-                        <img src={icons['CSS']} alt='CSS'/>
+                        <img src={icons['CSS']} alt='CSS icon'/>
                     </div>
                     CSS
                 </button>
@@ -60,7 +58,7 @@ function Menu() {
                     onClick={handleSubject}
                     data-subject='Javascript'>
                     <div className={styles.subject_icon}>
-                        <img src={icons['Javascript']} alt='javascript'/>
+                        <img src={icons['Javascript']} alt='javascript icon'/>
                     </div>
                     Javascript
                 </button>
@@ -69,7 +67,7 @@ function Menu() {
                     onClick={handleSubject}
                     data-subject='Accessibility'>
                     <div className={styles.subject_icon}>
-                        <img src={icons['Accessibility']} alt='accessibility'/>
+                        <img src={icons['Accessibility']} alt='accessibility icon'/>
                     </div>
                     Accessibility
                 </button>
