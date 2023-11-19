@@ -1,6 +1,6 @@
 const path = require('path');               //path is now a module that has access to pre defined methods that are built into Node.js
 const HtmlWebpackPlugin = require("html-webpack-plugin"); //to use a plugin with webpack, you must use require
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
@@ -16,7 +16,10 @@ module.exports = {
             filename: 'index.html',           //our production html file will be named index.html
             favicon: './src/Common/icons/favicon-32x32.png',     //loading a favicon in our html template
             template: './src/index.html'      //this is a template for our production html file, we are defining how the html will look like before we make our production html file
-        })
+        }),
+        new CopyWebpackPlugin({
+            patterns: [{ from: 'public', to: '' }],
+          }),
     ],
     devServer: {                              //configuration property for the development server
         port: 3000,                           //the devServer will start in port 3000
