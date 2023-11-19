@@ -3,9 +3,10 @@
     "name": "Quiz App",
     "icons": [
       {
-        "src": "favicon-32x32.png",
+        "src": "quiz icon.png",
         "type": "image/png",
-        "sizes": "32x32"
+        "sizes": "144x144",
+        "purpose": "any"
       }
     ],
     "start_url": ".",
