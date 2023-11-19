@@ -7,4 +7,4 @@ const rootRef = document.getElementById('root');
 const root = ReactDOM.createRoot(rootRef);
 root.render(<App/>);
 
-serviceWorker.unregister();
+serviceWorker.register();

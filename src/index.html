@@ -18,9 +18,10 @@
     </noscript>
     <div id="root"></div>
     <script> 
+
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/ServiceWorker/ServiceWorker.js')
+                navigator.serviceWorker.register('/src/Servic')
                     .then((registration) => {
                         console.log('Worker registration is successful', registration.scope);
                     }, (err) => {
