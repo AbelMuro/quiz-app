@@ -32,7 +32,7 @@ function DisplayChoices({choices, answer}){
             currentChoice.style.border = '';
             currentChoice.firstElementChild.style.backgroundColor = '';
             currentChoice.firstElementChild.style.color = ''
-            currentChoice.lastElementChild.setAttribute('src', '');
+            currentChoice.lastElementChild.removeAttribute('src');
             currentChoice.style.pointerEvents = ''
         })
 
