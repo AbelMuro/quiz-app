@@ -5,7 +5,7 @@
       {
         "src": "/quiz icon.png",
         "type": "image/png",
-        "sizes": "144x144",
+        "sizes": "512x512",
         "purpose": "any"
       }
     ],
