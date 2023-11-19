@@ -83,6 +83,8 @@
     width: 40px;
     object-fit: contain;
     position: absolute;
+    border: 0px solid transparent;
+    outline: 0px;
     top: 0px;
     bottom: 0px;
     right: 20px;
