@@ -50,7 +50,6 @@ const SubmitAnswer = forwardRef(({choice, setChoice}, ref) => {
             ref.current.firstElementChild.style.backgroundColor = '#EE5454';
             ref.current.firstElementChild.color = 'white';
             ref.current.lastElementChild.setAttribute('src', icons['incorrect'])
-        
             allChoices.forEach((currentChoice) => {
                 if(currentChoice.getAttribute('data-correct') === 'true'){
                     currentChoice.lastElementChild.setAttribute('src', icons['correct'])
