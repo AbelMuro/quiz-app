@@ -1,41 +1,48 @@
 var CACHE_NAME = 'Quiz App';
 var urlsToCache = [
-  '/',
-  '/completed'
+  '/'
 ];
 
 
 // Install service worker
-self.addEventListener('install', event => {
+self.addEventListener('install', e => {
   // Perform the install steps
-  event.waitUntil(
-    caches.open(CACHE_NAME)
+  e.waitUntil(                
+    caches.open(CACHE_NAME)         
       .then((cache) => {
-        console.log('Cache opened');
         return cache.addAll(urlsToCache);
       })
   );
 });
  
 // Cache and return the requests
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    caches.match(e.request)
       .then(function(response) {
-        // Return response as Cache is hit 
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
+          if (response) 
+            return response;
+          else
+            return fetch(e.request)
+                .then((response) => {
+                    const cloneResponse = response.clone();
+                    caches.open('Quiz App')
+                      .then((cache) => {
+                          cache.put(e.request, cloneResponse)
+                      })
+                  return networkResponse;
+                })
+        })
+        .catch(() => {
+          return new Response('Error');
+        })
   );
 });
  
 // Update service worker
-self.addEventListener('activate', event => {
-  var cacheWhitelist = ['task-manager-pwa'];
-  event.waitUntil(
+self.addEventListener('activate', e => {
+  var cacheWhitelist = ['Quiz App'];        
+  e.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
