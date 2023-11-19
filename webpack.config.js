@@ -8,7 +8,8 @@ module.exports = {
     entry:  './src/index.js',                            
     output: {                                  //output is where our production code will be sent to               
         path: path.join(__dirname, '/dist'),  //__dirname represents the current directory, /dist is the folder that will contain our production code
-        filename: 'bundle.js'                 //the bundled js file
+        filename: 'bundle.js',                 //the bundled js file
+        publicPath: '/public/'
     },
     plugins: [                      
         new HtmlWebpackPlugin({               //this plugin will help us generate the production html file in our /dist
