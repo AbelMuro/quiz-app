@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef, useCallback, memo} from 'react';
 import styles from './styles.module.css';
 import { useSelector} from 'react-redux';
 import SubmitAnswer from './SubmitAnswer';
+import icons from '~/Common/icons';
 
 function DisplayChoices({choices, answer}){
     const theme = useSelector(state => state.theme);
@@ -32,7 +33,7 @@ function DisplayChoices({choices, answer}){
             currentChoice.style.border = '';
             currentChoice.firstElementChild.style.backgroundColor = '';
             currentChoice.firstElementChild.style.color = ''
-            currentChoice.lastElementChild.removeAttribute('src');
+            currentChoice.lastElementChild.setAttribute('src', icons['transparent']);
             currentChoice.style.pointerEvents = ''
         })
 
