@@ -11,26 +11,12 @@
     <title>Front End Quiz</title>
     <link rel="manifest" href="/manifest.json"/>
     <base href="/"/> 
+    <script type="application/javascript" src="./ServiceWorker.js"></script>
 </head>
 <body>
     <noscript>
         Please enable javascript to use the app
     </noscript>
     <div id="root"></div>
-    <script> 
-
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/ServiceWorker.js')
-                    .then((registration) => {
-                        console.log('Worker registration is successful', registration.scope);
-                    }, (err) => {
-                        console.log('Worker registration has failed', err);
-                    })
-                });
-        } else {
-            console.log('Service Worker is not supported by your browser.');
-        }
-    </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-var CACHE_NAME = 'task-manager-pwa';
+var CACHE_NAME = 'Quiz App';
 var urlsToCache = [
   '/',
   '/completed'
@@ -34,7 +34,7 @@ self.addEventListener('fetch', event => {
  
 // Update service worker
 self.addEventListener('activate', event => {
-  var cacheWhitelist = ['task-manager-pwa'];
+  var cacheWhitelist = ['Quiz App'];
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
