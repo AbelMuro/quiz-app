@@ -3,7 +3,7 @@
     "name": "Quiz App",
     "icons": [
       {
-        "src": "quiz icon.png",
+        "src": "/quiz icon.png",
         "type": "image/png",
         "sizes": "144x144",
         "purpose": "any"
