@@ -21,7 +21,7 @@
 
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/src/Servic')
+                navigator.serviceWorker.register('/ServiceWorker.js')
                     .then((registration) => {
                         console.log('Worker registration is successful', registration.scope);
                     }, (err) => {

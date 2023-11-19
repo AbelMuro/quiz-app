@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './App.js';
-import serviceWorker from './ServiceWorker';
+import * as serviceWorker from './ServiceWorker.js';
 import ReactDOM from 'react-dom/client';
 
 const rootRef = document.getElementById('root');
