@@ -9,7 +9,6 @@ function Menu() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-
     const handleSubject = (e) => {
         const subject = e.target.getAttribute('data-subject');
         dispatch({type: 'START_QUIZ', subject});
