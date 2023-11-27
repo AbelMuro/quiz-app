@@ -73,7 +73,7 @@ const SubmitAnswer = forwardRef(({choice, setChoice}, ref) => {
                     Submit Answer
             </button>     
             <p className={styles.errorMessage} ref={errorMessageRef}>
-                <img src={icons['error']} alt='error'/>
+                <img src={icons['error']}/>
                 Please select an answer
             </p>   
         </>
