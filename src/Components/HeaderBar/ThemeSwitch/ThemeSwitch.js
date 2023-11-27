@@ -12,7 +12,6 @@ function ThemeSwitch () {
     const [tablet] = useMediaQuery('(max-width: 800px)');
 
     const handleSwitch = () => {
-        debugger;
         dispatch({type: 'SWITCH_THEME'});
     }
 
