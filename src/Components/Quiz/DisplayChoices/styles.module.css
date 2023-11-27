@@ -79,17 +79,21 @@
     box-shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
 }
 
-.isCorrectIcon {
-    width: 40px;
-    object-fit: contain;
+
+.iconContainer{
     position: absolute;
     top: 0px;
     bottom: 0px;
-    right: 20px;    
-    border: 0px solid transparent;
-    outline: 0px;
+    right: 20px;        
+    pointer-events: none;
+}
+
+.isCorrectIcon {
+    width: 40px;
+    object-fit: contain;
     margin: auto;
     pointer-events: none;
+    display: none;
 }
 
 @media(max-width: 1000px){

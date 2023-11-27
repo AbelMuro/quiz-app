@@ -33,7 +33,8 @@ function DisplayChoices({choices, answer}){
             currentChoice.style.border = '';
             currentChoice.firstElementChild.style.backgroundColor = '';
             currentChoice.firstElementChild.style.color = ''
-            currentChoice.lastElementChild.setAttribute('src', icons['transparent']);
+            currentChoice.lastElementChild.firstElementChild.style.display = '';
+            currentChoice.lastElementChild.lastElementChild.style.display = '';
             currentChoice.style.pointerEvents = ''
         })
 
@@ -65,7 +66,11 @@ function DisplayChoices({choices, answer}){
                                 <p className={switchTheme()}>
                                     {option}
                                 </p>  
-                                <img className={styles.isCorrectIcon} src={icons['transparent']} />
+                                <div className={styles.iconContainer}>
+                                    <img className={styles.isCorrectIcon} src={icons['correct']} />
+                                    <img className={styles.isCorrectIcon} src={icons['incorrect']}/>
+                                </div>
+                                
                         </button>
                     )
                 })
