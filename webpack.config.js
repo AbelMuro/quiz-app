@@ -25,9 +25,6 @@ module.exports = {
         port: 3000,                           //the devServer will start in port 3000
         historyApiFallback: true,             //this property helps with routing in our react app, everytime we refresh the page, react router will send a request to a server, but this property will make sure it searches for an index file first
     },
-    optimization: {
-        runtimeChunk: 'single',
-    }, 
     module: {
         rules: [                               
             {                                   //loaders are transformations that are applied to files (typescript to javascript, sass to css)
