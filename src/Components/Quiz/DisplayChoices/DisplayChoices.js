@@ -64,7 +64,7 @@ function DisplayChoices({choices, answer}){
                                 </h3>
                                 <p className={switchTheme()}>
                                     {option}
-                                </p>
+                                </p>  
                                 <img className={styles.isCorrectIcon} src={icons['transparent']} />
                         </button>
                     )
