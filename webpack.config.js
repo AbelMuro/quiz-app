@@ -4,12 +4,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
-
     entry:  './src/index.js',                            
     output: {                                  //output is where our production code will be sent to               
         path: path.join(__dirname, '/dist'),  //__dirname represents the current directory, /dist is the folder that will contain our production code
         filename: 'bundle.js',                 //the bundled js file
-        publicPath: '/'                         //this is required for the copy-webpack-plugin
+        publicPath: '/',                         //this is required for the copy-webpack-plugin
     },
     plugins: [                      
         new HtmlWebpackPlugin({               //this plugin will help us generate the production html file in our /dist
@@ -22,7 +21,7 @@ module.exports = {
           }),
     ],
     devServer: {                              //configuration property for the development server
-        port: 3000,                           //the devServer will start in port 3000
+        port: 2000,                           //the devServer will start in port 3000
         historyApiFallback: true,             //this property helps with routing in our react app, everytime we refresh the page, react router will send a request to a server, but this property will make sure it searches for an index file first
     },
     module: {

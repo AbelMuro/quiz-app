@@ -42,17 +42,17 @@ const SubmitAnswer = forwardRef(({choice, setChoice}, ref) => {
             ref.current.style.border = '3px solid #26D782';
             ref.current.firstElementChild.style.backgroundColor = '#26D782';
             ref.current.firstElementChild.color = 'white';
-            ref.current.lastElementChild.firstElementChild.style.display = 'block';
+            ref.current.lastElementChild.setAttribute('src', icons['correct']);
             dispatch({type: 'UPDATE_SCORE'})
         }
         else{
             ref.current.style.border = '3px solid #EE5454';
             ref.current.firstElementChild.style.backgroundColor = '#EE5454';
             ref.current.firstElementChild.color = 'white';
-            ref.current.lastElementChild.lastElementChild.style.display = 'block';
+            ref.current.lastElementChild.setAttribute('src', icons['incorrect']);
             allChoices.forEach((currentChoice) => {
                 if(currentChoice.getAttribute('data-correct') === 'true'){
-                    currentChoice.lastElementChild.firstElementChild.style.display = 'block'
+                    currentChoice.lastElementChild.setAttribute('src', icons['correct']);
                 }
             })
         }
