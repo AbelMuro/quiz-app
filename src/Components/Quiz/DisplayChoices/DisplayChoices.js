@@ -70,7 +70,6 @@ function DisplayChoices({choices, answer}){
                                     <img className={styles.isCorrectIcon} src={icons['correct']} />
                                     <img className={styles.isCorrectIcon} src={icons['incorrect']}/>
                                 </div>
-                                
                         </button>
                     )
                 })
