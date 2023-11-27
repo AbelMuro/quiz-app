@@ -80,16 +80,6 @@
 }
 
 
-.iconContainer{
-    width: 40px;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 20px;        
-    pointer-events: none;
-    margin: auto;
-}
-
 .isCorrectIcon {
     width: 40px;
     object-fit: contain;
