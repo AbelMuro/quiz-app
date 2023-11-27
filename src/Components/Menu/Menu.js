@@ -27,7 +27,7 @@ function Menu() {
             <div className={styles.menu_intro}>
                 <h1 className={switchTheme()}>
                     Welcome to the
-                    <span>Frontend Quiz</span>
+                    <span>Frontend Quiz!</span>
                 </h1>
                 <p className={switchTheme()}>
                     Pick a subject to get started
