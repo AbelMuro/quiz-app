@@ -18,7 +18,7 @@
     </noscript>
     <div id="root"></div>
     
-    <script type="module">
+    <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register(`/ServiceWorker.js`).then((registration) => {
